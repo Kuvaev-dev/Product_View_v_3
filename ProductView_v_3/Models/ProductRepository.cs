@@ -41,7 +41,7 @@ namespace ProductView_v_3.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[AddProducts]   @category ,@salesman , @product , @model , @description ,@price,@img  ";
+                        var sql = "EXEC [dbo].[AddProducts] @category, @salesman, @product, @model, @description, @price,@img";
                         var values = new
                         {
                             category = value.category,
@@ -75,7 +75,7 @@ namespace ProductView_v_3.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[UpdateProducts] @id,   @category ,@salesman , @product , @model , @description ,@price, @img  ";
+                        var sql = "EXEC [dbo].[UpdateProducts] @id, @category, @salesman, @product, @model, @description, @price, @img";
                         var values = new
                         {
                             id = value.id,
@@ -109,7 +109,7 @@ namespace ProductView_v_3.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[DellProducts] @id";
+                        var sql = "EXEC [dbo].[DellProducts] @id";
                         var values = new  { id = id  };
                         db.Query(sql, values, transaction);
                         transaction.Commit();
