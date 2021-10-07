@@ -19,7 +19,7 @@ namespace ProductView_v_3.Models
                 try
                 {
                     db.Open();
-                    var sql = "exec [dbo].[GetProducts]    ";
+                    var sql = "EXEC [dbo].[GetProducts]";
                     coll = db.Query<Product>(sql).ToList();
                 }
                 catch (Exception ex)
