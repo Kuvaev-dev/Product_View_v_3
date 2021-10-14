@@ -9,7 +9,7 @@ namespace ProductView_v_3.Models
 {
     public class ProductRepository
     {
-        static string connectionString = "Data Source=SQL5080.site4now.net;Initial Catalog=db_a7920a_mkonjibhu;User Id=db_a7920a_mkonjibhu_admin;Password=QwertyuioP123";
+        static string connectionString = "Data Source=SQL5080.site4now.net;Initial Catalog=db_a7920a_regdb;User Id=db_a7920a_regdb_admin;Password=qwerty009";
         public static List<Product> GetProducts()
         {
             List<Product> coll = new List<Product>();
